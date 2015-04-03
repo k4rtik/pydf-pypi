@@ -2,7 +2,7 @@
 
 **NOTE**: *This repo is used for generating a [PyPI package](https://pypi.python.org/pypi/pydf) for [pydf tool](http://kassiopeia.juls.savba.sk/~garabik/software/pydf/) written by [Radovan Garabík](http://kassiopeia.juls.savba.sk/~garabik/). This makes it possible to install pydf with the familiar `pip` command. I have not written 'pydf'; I just hope to maintain the package and possibly fix some bugs. Improvements to `setup.py` and related files are welcome in the form of PRs. --k4rtik*
 
-Original README with some additional formatting follows:
+Original README with some additional formatting and screenshots follow.
 
 ---
 
@@ -54,3 +54,9 @@ with red etc...
 
 Written by [Radovan Garabík](garabik@kassiopeia.juls.savba.sk).  
 For new versions, look at http://kassiopeia.juls.savba.sk/~garabik/software/pydf/
+
+---
+
+### Screenshots
+![](pydf1.png)
+![](pydf2.png)
