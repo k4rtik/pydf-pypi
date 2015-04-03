@@ -1,0 +1,5 @@
+include COPYING
+include pydf.1
+include changelog
+include INSTALL
+include pydfrc

@@ -1,0 +1,277 @@
+pydf (12) unstable; urgency=low
+
+  * better python3 compatibility; escape control and invalid characters in
+    mountpoint names
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Fri, 26 Dec 2014 22:35:40 +0100
+
+pydf (11) unstable; urgency=low
+
+  * add nfs4 to the list of remote filesystems (thanks to Markus Hauschild)
+  * add fallback if resize does not work (closes: #577454)
+  * somewhat better dealing with possible errors in 'resize' fallback
+  * add several Debian/kFreeBSD special filesystems
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Sun, 27 Jan 2013 20:42:24 +0200
+
+pydf (10) unstable; urgency=low
+
+  * normal_colour was not interpreting colour codes properly
+    (thanks to Juhapekka Tolvanen and Norman Rasmussen for
+     pointing this out)
+    (closes: #577595, #582462)
+  * if termios reports zero for terminal width, use fallback
+    (closes: #577454)
+  * added devtmpfs to the list of special filesystems
+    (closes: #577453), both bugreports thanks to Romain Francoise
+  * use subprocess or commands depending on major python version
+    (closes: #579936), patch thanks to Emmanuel Bouthenot
+  * remove parentheses in class definition, to enable
+    python2.4 compatibility (thanks to Clint Savage)
+  * add patch for /dev/mapper links, thanks to Ernest Beinrohr
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Sun, 11 Dec 2011 15:06:41 +0200
+
+pydf (9) unstable; urgency=low
+
+  * remove stray ANSI escape sequence when using --bw mode
+  * convert to run with python3 (thanks to Dror Levin)
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Mon, 29 Mar 2010 23:06:15 +0200
+
+pydf (8) unstable; urgency=low
+
+  * run pylint & pychecker -- fix some previously unnoticed bugs 
+  * treat "special" filesystems and those with 0 blocks the same 
+    (i.e. do not display them unless -a option is given)
+  * add fuse.sshfs to the list of networked filesystems
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Sat, 24 Oct 2009 17:40:14 +0200
+
+pydf (7) unstable; urgency=low
+
+  * add 'inodes' option (closes: #51044), patch thanks to Thomas Rösner
+  * change 'blocks-size' option into 'block-size', as originally intended
+  * if the used percentage is meaningless, display '-' instead of 0
+  * minor documentation updates
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Fri, 10 Apr 2009 14:40:00 +0200
+
+pydf (6) unstable; urgency=low
+
+  * add the 'hidebinds' options (thanks to Martin von Wittich)
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Thu, 17 Apr 2008 22:24:03 +0200
+
+pydf (5) unstable; urgency=low
+
+  * make the bar stretchable, to fill the whole screen width
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Fri, 10 Aug 2007 13:53:49 +0200
+
+pydf (4) unstable; urgency=low
+
+  * fix scrolling artefacts at the bottom of terminal
+  * fix accidentally removed possibility to use colour sequences
+
+ --  Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Thu, 19 Jul 2007 14:54:15 +0200
+
+pydf (3) unstable; urgency=low
+
+  * completely rewrited formatting code, now utilizes better
+    screen width (closes: #421118)
+  * display special filesystems with block_size != 0 in different colour
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Sun, 15 Jul 2007 19:36:05 +0200
+
+pydf (2) unstable; urgency=low
+
+  * use termios to get terminal size, does not need resize(1) anymore
+    (thanks to Josip Rodin for the idea)
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Sun, 13 May 2007 10:14:45 +0200
+
+pydf (1) unstable; urgency=low
+
+  * show read only mounted filesystems in different colour (thanks 
+    to Michał J. Gajda and Bastian Kleineidam)
+  * add binary-arch target to debian/rules (closes: #395633)
+  * work around python statvfs 32-bit overflow (closes: #396298)
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Wed, 1 Nov 2006 17:09:52 +0200
+
+pydf (0.9.9) unstable; urgency=low
+
+  * find automatically mountpoints for arguments (closes: #140483),
+    thanks to Jürgen A. Erhard
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Thu, 30 Mar 2006 18:34:49 +0200
+
+pydf (0.9.8.5) unstable; urgency=low
+
+  * added sshfs to the list of remote filesystems
+  * added udf to the list of filesystem that are always full 
+    (thanks to Benoît Dejean)
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Fri,  2 Sep 2005 23:12:41 +0200
+
+pydf (0.9.8.4) unstable; urgency=low
+
+  * mountfile can be a list now, pydf will try each of them
+  * fallback to parsing mount(1) output if no mountfile is available 
+    (this adds support for many different operating systems, e.g. MacOSX)
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Mon, 22 Aug 2005 11:01:01 +0200
+
+pydf (0.9.8.3) unstable; urgency=low
+
+  * failback to default size when 'resize' is not present (closes: #320564)
+  * Suggest xutils (for 'resize')
+  * better barsize rounding
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Wed,  3 Aug 2005 10:24:40 +0200
+
+pydf (0.9.8.2) unstable; urgency=low
+
+  * use F_BSIZE instead of F_FRSIZE (closes: #289527)
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Tue,  2 Aug 2005 12:54:30 +0200
+
+pydf (0.9.8.1) unstable; urgency=low
+
+  * change forgotten FILL_THRESH value from ridiculously low value back 
+    to 0.95, thanks to Lasse Pommerenke for noticing (closes: #318968)
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Tue, 19 Jul 2005 09:34:41 +0200
+
+pydf (0.9.8) unstable; urgency=low
+
+  * try to detect terminal size
+  * round values to nearest number (closes: #278683, #315273), note that df(1)
+    sometimes rounds the values incorrectly
+
+ -- Radovan Garabík <garabik@kassiopeia.juls.savba.sk>  Sat, 30 Apr 2005 16:05:11 +0200
+
+pydf (0.9.7) unstable; urgency=low
+
+  * overall reworking, brought up in sync with newer python versions
+  * accepts mountpoints as arguments (closes: #140483), thanks to Josip Rodin
+  * only necessary filesystems are queried (closes: #280907)
+
+ -- Radovan Garabik <garabík@kassiopeia.juls.savba.sk>  Wed,  5 Jan 2005 20:28:28 +0100
+
+pydf (0.9.6) unstable; urgency=low
+
+  * modified dependencies for new python numbering scheme (closes: #118248)
+  * mention /etc/pydfrc in manpage (closes: #108167)
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Mon,  5 Nov 2001 10:47:10 +0100
+
+pydf (0.9.5) unstable; urgency=low
+
+  * corercted typo in manpage (closes #99878).
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Mon,  4 Jun 2001 13:07:06 +0200
+
+pydf (0.9.4) unstable; urgency=low
+
+  * move Build-Depends where it belongs.
+  * depends on python | python2
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Fri, 23 Feb 2001 21:41:04 +0100
+
+pydf (0.9.3) unstable; urgency=low
+
+  * rebuilt with a new GPG key
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Fri,  1 Sep 2000 08:27:58 +0200
+
+pydf (0.9.2) unstable; urgency=low
+
+  * added debhelper to Build-Depends
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Wed, 16 Feb 2000 16:08:24 +0100
+
+pydf (0.9.1) unstable; urgency=low
+
+  * Fixed stupid bug affecting those with broken python on RedHat.
+    Thanks to Keith M. Briggs for pointing this out.
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Fri, 14 Jan 2000 13:09:13 +0100
+
+pydf (0.9) unstable; urgency=low
+
+  * More colour definitions
+  * Upgraded Standards-Version
+  * Corrected typo in the manpage
+  * Included pointer to stat(1) in README
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Thu,  6 Jan 2000 17:24:32 +0100
+
+pydf (0.8.1) unstable; urgency=low
+
+  * NMU (sponsored).
+  * Set control file so Radovan is listed properly as the maintainer.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue,  4 Jan 2000 02:11:01 -0600
+
+pydf (0.8) unstable; urgency=low
+
+  * statvfs checks for errors - e.g., if you do not have rights to statfs
+    the filesystem, pydf would not crash
+  * use getopt for argument parsing
+  * added --block-size, --local, --all options
+  * Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk> is the person
+    responsible for this package; I am his sponsor and uploading it on his
+    behalf.
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue,  5 Oct 1999 20:25:25 +0200
+
+pydf (0.7) unstable; urgency=low
+
+  * build with new debhelper - FHS compliant
+  * a couple of spelling errors in README fixed
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Sat, 18 Sep 1999 10:34:28 +0200
+
+pydf (0.6) unstable; urgency=low
+
+  * now displays size correctly for filesystem with FRSIZE != BSIZE,
+    workaround for some broked pythons (see 0.3) still valid
+  * documentation update
+  * increased version number from 0.4 :-)
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Wed, 15 Sep 1999 20:52:21 +0200
+
+pydf (0.5) unstable; urgency=low
+
+  * fixed typo preventing correct display of small sizes
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Wed,  1 Sep 1999 13:19:38 +0200
+
+pydf (0.4) unstable; urgency=low
+
+  * network filesystems with block size 0 are now recognized as network 
+    filesystems, not as special filesystems
+  * workaround for older python interpreter without os.statvfs function
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Mon, 30 Aug 1999 19:53:50 +0200
+
+pydf (0.3) unstable; urgency=low
+
+  * Restore original colour after itself
+  * Should work on RedHat 6.0 now
+  * Improved colour scheme
+  * Added --mounts option
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Fri, 27 Aug 1999 17:24:45 +0200
+
+pydf (0.2) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Radovan Garabik <garabik@melkor.dnp.fmph.uniba.sk>  Thu, 26 Aug 1999 19:16:29 +0200
+
+Local variables:
+mode: debian-changelog
+End:

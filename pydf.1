@@ -1,0 +1,83 @@
+.TH PYDF 1 
+.SH NAME
+pydf \- report colourised filesystem disk space usage
+.SH SYNOPSIS
+.B pydf
+.I "[options]"
+.I "[file]"
+.SH "DESCRIPTION"
+.B pydf
+is a python script that displays the amount of disk space available 
+on the mounted filesystems, using different colours for different 
+types of filesystems. Output format is completely customizable.
+.TP
+If an optional 
+.I "file"
+argument is given, pydf displays just information about filesystem 
+containing the file(s), otherwise it displays information about all
+mounted filesystems.
+
+.SH OPTIONS
+.TP
+.B  \-\-help
+Show summary of options.
+.TP
+.B \-v, \-\-version
+Show version of program.
+.TP
+.B \-a, \-\-all
+include filesystems having 0 blocks
+.TP
+.B \-h, \-\-human-readable
+print sizes in human readable format (e.g., 133K 2341M 2448G)
+.TP
+.B \-H, \-\-si
+likewise, but use powers of 1000 not 1024
+.TP
+.B \-\-block-size=SIZE
+use SIZE-byte blocks
+.TP
+.B \-k, \-\-kilobytes
+like --block-size=1024
+.TP
+.B \-i, \-\-inodes
+show information about inodes instead of blocks
+.TP
+.B \-l, \-\-local
+limit listing to local filesystems
+.TP
+.B \-m, \-\-megabytes
+like --block-size=1048576
+.TP
+.B \-g, \-\-gigabytes
+like --block-size=1073741824
+.TP
+.B \-\-blocks
+use filesystem native block size
+.TP
+.B \-\-bw
+do not use colours
+.TP
+.B --mounts=FILE
+file to get mount information from.
+On normal linux system, only /etc/mtab or /proc/mounts make sense.
+Use /proc/mounts when /etc/mtab is corrupted or inaccessible 
+(the output looks a bit weird in this case though)
+.TP
+.B \-B, \-\-show\-binds
+Show also mount --bind mounted filesystems.
+.SH "BUGS"
+When running with python3, mountpoints with out-of-locale non ASCII 
+names will not be displayed (due to inability of os.statvfs to use bytes
+instead of strings).
+.SH "FILES"
+.TP
+.B /etc/pydfrc
+main configuration file
+.TP
+.B ~/.pydfrc
+per-user configuration file
+.SH "SEE ALSO"
+.BR df "(1)
+.SH AUTHOR
+Radovan Garab\('ik <garabik@kassiopeia.juls.savba.sk>

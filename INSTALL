@@ -1,0 +1,11 @@
+You must have python installed (at least version 2.3, or version 2.2.
+with optparse package).
+
+Python3 is recommended, though.
+
+edit first line of pydf to point to your python interpreter,
+copy pydf somewhere into your path, 
+copy pydf.1 where your manpages reside (e.g. /usr/local/man/man1)
+and copy pydfrc into /etc/pydfrc, or ~/.pydfrc
+
+Modify /etc/pydfrc according to your taste.
