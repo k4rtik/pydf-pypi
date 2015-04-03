@@ -1,16 +1,17 @@
-# pydf
+# PyPI package for pydf 
 
-**NOTE**: This repo is used for generating a PyPI package for the pydf tool
-written by Radovan Garabík. This makes it possible to install pydf with the
-familiar `pip` command. I have not written 'pydf'; I just hope to maintain
-the package and possibly fix some bugs. --k4rtik
+**NOTE**: *This repo is used for generating a [PyPI package](https://pypi.python.org/pypi/pydf) for [pydf tool](http://kassiopeia.juls.savba.sk/~garabik/software/pydf/) written by [Radovan Garabík](http://kassiopeia.juls.savba.sk/~garabik/). This makes it possible to install pydf with the familiar `pip` command. I have not written 'pydf'; I just hope to maintain the package and possibly fix some bugs. Improvements to `setup.py` and related files are welcome in the form of PRs. --k4rtik*
 
 Original README with some additional formatting follows:
+
+---
+
+## pydf
 
 pydf is all-singing, all-dancing, fully colourised `df(1)`-clone
 written in python.
 
-## Requirements:
+### Requirements:
 pydf was written for linux, using specific linux features.
 The fact it runs on other systems is pure coincidence,
 but neverthless it happens to work on wide range of modern
@@ -51,5 +52,5 @@ with red etc...
   -B, --show-binds      show also mount --bind mounted filesystems
 ```
 
-Written by Radovan Garabík <garabik @ kassiopeia.juls.savba.sk>.
+Written by [Radovan Garabík](garabik@kassiopeia.juls.savba.sk).  
 For new versions, look at http://kassiopeia.juls.savba.sk/~garabik/software/pydf/
