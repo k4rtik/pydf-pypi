@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 setup(
     name='pydf',
@@ -13,6 +16,8 @@ types of filesystems. Output format is completely customizable.
     url='http://kassiopeia.juls.savba.sk/~garabik/software/pydf/',
     author='Radovan Garabík',
     author_email='garabik@kassiopeia.juls.savba.sk',
+    maintainer='Kartik Singhal',
+    maintainer_email='kartiksinghal@gmail.com',
     license='Public Domain',
     classifiers=[
         'Development Status :: 4 - Beta',
