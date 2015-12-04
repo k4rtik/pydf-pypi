@@ -3,3 +3,6 @@ include pydf.1
 include changelog
 include INSTALL
 include pydfrc
+global-exclude *~
+global-exclude *.pyc
+prune .DS_Store
