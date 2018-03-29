@@ -52,7 +52,7 @@ with red etc...
   -B, --show-binds      show also mount --bind mounted filesystems
 ```
 
-Written by [Radovan Garabík](garabik@kassiopeia.juls.savba.sk).  
+Written by [Radovan Garabík](mailto:garabik@kassiopeia.juls.savba.sk).  
 For new versions, look at http://kassiopeia.juls.savba.sk/~garabik/software/pydf/
 
 ---
